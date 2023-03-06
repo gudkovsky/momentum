@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="current-track"></div>
+
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+<!-- 
+        <div class="time-container">
+          <div class="current-time">00:00</div>
+          <div class="track-duration">00:00</div>
+        </div> -->
+
+        <div class="volume-container">
+          <div class="volume-button">
+          </div>
+          
+          <div class="volume-slider">
+            <div class="volume-percentage"></div>
+          </div>
+
+        </div>
+
+        <!-- <div class="new-volume-slider">
+          <input class="slider-input" type="range" min="0" max="0" value="50">
+          <progress class="slider-progress" min="0" max="100" value="50"></progress>
+        </div> -->
+
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <!-- Search bar -->
+      <div class="search-container">
+        <input type="text" class="search-bar" autocomplete="off">
+        <span class="search-bar__clear"></span>
+      </div>
+
+    <!-- TODO list -->
+    <div class="todo-container">
+      <button class="show-more__button"></button>
+
+      <div class="show-more__container">
+          <div class="show-actions">
+            <button class="reset-all__button" title="Удалить все задачи"></button>
+            <div class="todo__description">
+              <li><span class="show-more__span">левый клик</span> отметить, как "выполнено"</li>
+              <li><span class="show-more__span">правый клик</span> отметить важную задачу</li>
+              <li><span class="show-more__span">ctrl + правый клик</span>удалить задачу</li>
+            </div>
+
+          </div>
+      </div>
+      <div class="todo_list">
+
+        <div class="create_new_todo">
+            <input class="message" type="text"  placeholder="Текст задачи">
+            <button class="add"></button>
+        </div>
+
+        <div class="todo__wrapper">
+            <ul class="todo">
+
+            </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="weather">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="&#91;ВАШЕ ИМЯ&#93;" style="width: 270px"> 
+      <!-- <input type="text" class="name" placeholder="&#91;ENTER NAME&#93;" oninput="increaseWidth(this)"> -->
+    </div>
+
+  </main>
+  <footer class="footer">
+    <button class="change-quote"></button>
+    <div class="quote__section">
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+
+    <button class="settings__button"></button>
+    <div class="settings__container">
+
+      <div class="settings__section">
+        <h3>Здесь Вы можете выбрать отображаемые на странице элементы</h3>
+        <ul class="settings__list">
+        <li>
+          <input type="checkbox" id="settings-player" checked>
+          <label for="settings-player" >Аудио-плеер</label>
+        </li>
+        <li>
+          <input type="checkbox" id="settings-todo" checked>
+          <label for="settings-todo">Список задач</label>
+        </li>
+        <li>
+          <input type="checkbox" id="settings-weather" checked>
+          <label for="settings-weather">Виджет погоды</label>
+        </li>
+        <li>
+          <input type="checkbox" id="settings-greeting" checked>
+          <label for="settings-greeting">Приветствие</label>
+        </li>
+        <li>
+          <input type="checkbox" id="settings-search" checked>
+          <label for="settings-search">Строка поиска</label>
+        </li>
+        <li>
+          <input type="checkbox" id="settings-quotes" checked>
+          <label for="settings-quotes">Блок цитат</label>
+        </li>
+      </ul>
+      </div> 
+    </div>
+  </footer>
+  <script src="js/main.js" type="module"></script>
+  <!-- <script>
+  let increaseWidth = function(x) {
+    let numberOfCharacters = x.value.length;
+      if (numberOfCharacters >= 12) {
+        let extraLength = numberOfCharacters + 'ch';
+        x.style.width = extraLength;
+      }
+  }
+
+  </script> -->
+</body>
+</html>
